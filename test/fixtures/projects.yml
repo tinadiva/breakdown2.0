@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  description: MyText
+  deadline: 2017-10-29 14:22:42
+  reminder: false
+  reward: false
+  milestone: false
+
+two:
+  name: MyText
+  description: MyText
+  deadline: 2017-10-29 14:22:42
+  reminder: false
+  reward: false
+  milestone: false
