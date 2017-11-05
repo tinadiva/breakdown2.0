@@ -26,7 +26,7 @@
     <%= form.datetime_select :deadline, id: :project_deadline %>
   </div>
 
-  <div class="field">
+ <!-- <div class="field">
     <%= form.label :reminder %>
     <%= form.check_box :reminder, id: :project_reminder %>
   </div>
@@ -34,11 +34,26 @@
   <div class="field">
     <%= form.label :reward %>
     <%= form.check_box :reward, id: :project_reward %>
-  </div>
+  </div> -->
 
   <div class="field">
-    <%= form.label :milestone %>
-    <%= form.check_box :milestone, id: :project_milestone %>
+  <h3>Does Your Project Have Milestones?</h3>
+  <!-- <%= form.label :milestone %>
+  <%= form.check_box :milestone, id: :project_milestone %> -->
+  <p>
+  <%= form.nested_fields_for :steps do |step| %>
+  <%= step.label :milestone %>
+  <%= step.text_field :task %>
+  <br>
+  <%= step.label :due_date %>
+  <%= step.date_field :due_date %>
+  <%= step.remove_nested_fields_link %>
+  <br>
+  <br>
+  <% end %>
+  <%=form.add_nested_fields_link :steps, 'Add Milestone' %>
+  </p>
+
   </div>
 
   <div class="actions">
