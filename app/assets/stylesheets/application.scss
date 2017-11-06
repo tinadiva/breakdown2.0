@@ -15,3 +15,48 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.project-box {
+	height: 400px;
+	width: 300px;
+	position: relative;
+	box-shadow: 10px 10px 5px #888888;
+	background: #bdc3c7;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	margin-right: 20px;
+}
+
+.project-name ul {
+	font-size: 50px;
+	list-style-type:none;
+	position: relative;
+	padding: 10px;
+	line-height: 55px;
+}
+
+.project-info ul {
+	list-style-type:none;
+	position: relative;
+	font-size: 35px;
+	padding: 10px;
+	line-height: 45px;
+}
+
+.project.box li {
+	font-size: 35px;
+}
+
+.project-options ul {
+	list-style-type: none;
+	display: inline;
+	font-size: 35px;
+	line-height: 45px;
+	bottom: 0;
+}
+
+.new-project-link {
+	padding-top: 50px;
+	font-size: 50px;
+	bottom: 0;
+}

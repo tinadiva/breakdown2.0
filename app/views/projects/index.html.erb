@@ -5,37 +5,47 @@
 
 <h2>All Projects</h2>
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Deadline</th>
-      <!-- <th>Reminder</th>
-      <th>Reward</th>
-      <th>Milestone</th> -->
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.name %></td>
-        <td><%= project.description %></td>
-        <td><%= project.deadline %></td>
+<% @projects.each do |project| %>
+  <div class="col-md-4">
+  <div class="project-box">
+    <div class="project-name">
+      <ul>
+        <li><%= project.name %></li>
+      </ul>
+    </div>
+    <div class="project-info">
+      <ul>
+        <li><%= project.description %></li>
+       <!-- <li><%= project.deadline %></li> -->
         <!-- <td><%= project.reminder %></td>
         <td><%= project.reward %></td>
         <td><%= project.milestone %></td> -->
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      </ul>
+    </div>
+    <div class="project-options">
+      <ul>
+        <li><%= link_to 'Show', project %></li>
+        <li><%= link_to 'Edit', edit_project_path(project) %></li>
+        <li><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+<% end %>
+
+
 
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
+<div class="new-project-link">
 <%= link_to 'New Project', new_project_path %>
+</div>
 </div>

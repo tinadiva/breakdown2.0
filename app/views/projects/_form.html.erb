@@ -13,16 +13,19 @@
 
   <div class="field">
     <%= form.label :name %>
+    <br>
     <%= form.text_area :name, id: :project_name %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
+    <br>
     <%= form.text_area :description, id: :project_description %>
   </div>
 
   <div class="field">
     <%= form.label :deadline %>
+    <br>
     <%= form.datetime_select :deadline, id: :project_deadline %>
   </div>
 
