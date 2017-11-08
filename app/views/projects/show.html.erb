@@ -1,22 +1,18 @@
 <div class="container-fluid">
 <p id="notice"><%= notice %></p>
 
-<h1>Project Details</h1>
-
-<p>
-  <strong>Name:</strong>
+<h1>
   <%= @project.name %>
-</p>
+</h1>
 
 <p>
-  <strong>Description:</strong>
   <%= @project.description %>
 </p>
 
-<p>
-  <strong>Deadline:</strong>
-  <%= @project.deadline %>
-</p>
+<br>
+
+  <h2>Deadline:</h2>
+  <p><%= @project.deadline %></p>
 
 <!-- <p>
   <strong>Reminder:</strong>
@@ -28,15 +24,15 @@
   <%= @project.reward %>
 </p> -->
 
-<p>
-  <strong>Milestones:</strong>
-  <%= @project.milestone %>
+<br>
+
+  <h2>Milestones:</h2>
+  <p><%= @project.milestone %></p>
     <ol>
       <% for @step in @project.steps %>
       <li><%= @step.task %> <%= @step.due_date %></li>
       <% end %>
   </ol>
-</p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

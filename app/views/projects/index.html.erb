@@ -1,3 +1,8 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald" rel="stylesheet">
+
+</head>
+
 <div class="container-fluid">
 <p id="notice"><%= notice %></p>
 
@@ -15,13 +20,15 @@
     </div>
     <div class="project-info">
       <ul>
-        <li><%= project.description %></li>
+        <li><p><%= project.description %></p></li>
        <!-- <li><%= project.deadline %></li> -->
         <!-- <td><%= project.reminder %></td>
         <td><%= project.reward %></td>
         <td><%= project.milestone %></td> -->
       </ul>
     </div>
+    <br>
+    <br>
     <div class="project-options">
       <ul>
         <li><%= link_to 'Show', project %></li>

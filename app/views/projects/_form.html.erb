@@ -1,3 +1,10 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald" rel="stylesheet">
+
+</head>
+
+<div class="container">
+<body>
 <%= form_with(model: project, local: true) do |form| %>
   <% if project.errors.any? %>
     <div id="error_explanation">
@@ -12,20 +19,22 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <h2>What are you working on?</h2>
     <br>
+    <p><%= form.label :name %></p>
     <%= form.text_area :name, id: :project_name %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <br>
+    <p><%= form.label :description %></p>
     <%= form.text_area :description, id: :project_description %>
   </div>
 
+  <br>
+
   <div class="field">
+    <h2>What is the deadline?</h2>
     <%= form.label :deadline %>
-    <br>
     <%= form.datetime_select :deadline, id: :project_deadline %>
   </div>
 
@@ -63,3 +72,6 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+</body>
+</div>
