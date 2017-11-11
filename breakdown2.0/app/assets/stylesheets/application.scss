@@ -1,0 +1,85 @@
+/*
+
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+	background-color: #97e6ef;
+}
+
+.container {
+	margin-left: 10px;
+}
+
+h1 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 40px;	
+}
+
+h2 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 34px;
+}
+
+h3 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 24px;
+}
+
+p{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 18px;
+}
+
+.project-box {
+	height: 350px;
+	width: 300px;
+	position: relative;
+	box-shadow: 10px 10px 5px #888888;
+	background: #bdc3c7;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	margin-right: 20px;
+}
+
+.project-name ul {
+	font-size: 50px;
+	list-style-type:none;
+	position: relative;
+	padding: 10px;
+	line-height: 55px;
+}
+
+.project-info ul {
+	list-style-type:none;
+	position: relative;
+	font-size: 35px;
+	padding: 10px;
+	line-height: 45px;
+}
+
+.project.box li {
+	font-size: 35px;
+}
+
+.project-options li {
+	display: inline;
+	bottom: 0;
+}
+
+.project-options ul {
+	list-style-type: none;
+	display: inline;
+	font-size: 24px;
+	line-height: 45px;
+	bottom: 0;
+}
+
+.new-project-link {
+	padding-top: 50px;
+	font-size: 50px;
+	bottom: 0;
+}

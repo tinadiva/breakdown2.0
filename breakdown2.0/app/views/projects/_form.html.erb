@@ -1,0 +1,94 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald" rel="stylesheet">
+
+</head>
+
+<div class="container">
+<body>
+<%= form_with(model: project, local: true) do |form| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <h2>What are you working on?</h2>
+    <br>
+    <p><%= form.label :name, 'Project Name' %></p>
+    <%= form.text_area :name, id: :project_name %>
+  </div>
+
+  <div class="field">
+    <p><%= form.label :description, 'Project Description' %></p>
+    <%= form.text_area :description, id: :project_description %>
+  </div>
+
+  <br>
+
+  <div class="field">
+    <h2>What is the project deadline?</h2>
+    <br>
+    <p><%= form.label :deadline, 'Project Deadline' %></p>
+    <%= form.date_field :deadline, id: :project_deadline %>
+  </div>
+  <br>
+ <!-- <div class="field">
+    <%= form.label :reminder %>
+    <%= form.check_box :reminder, id: :project_reminder %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reward %>
+    <%= form.check_box :reward, id: :project_reward %>
+  </div> -->
+
+  <div class="field">
+    <h2>Does Your Project Have Milestones?</h2>
+    <br>
+    <button onclick="myFunction()"><%= form.check_box :milestone, id: :project_milestone %></button> 
+    <%= form.label :milestone %>
+    <!-- <%= form.check_box :milestone, id: :project_milestone %> -->
+    <br>
+    <div id="milestone" style="display: none;">
+      <br>
+      <p>
+      <%= form.nested_fields_for :steps do |step| %>
+      <%= step.label :milestone %>
+      <%= step.text_field :task %>
+      <br>
+      <%= step.label :due_date %>
+      <%= step.date_field :due_date %>
+      <%= step.remove_nested_fields_link %>
+      <br>
+      <br>
+      <% end %>
+      <%=form.add_nested_fields_link :steps, 'Click to Add Milestone' %>
+      </p>
+    </div>
+  </div>
+    
+<script> function myFunction() {
+    var x = document.getElementById("milestone");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+<br>
+<br>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+</body>
+</div>

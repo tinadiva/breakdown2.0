@@ -1,0 +1,50 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald" rel="stylesheet">
+
+</head>
+
+<div class="container-fluid">
+<p id="notice"><%= notice %></p>
+
+<h1>Breakdown App</h1>
+
+<h2>All Projects</h2>
+
+<div class="new-project-link">
+<%= link_to 'New Project', new_project_path %>
+</div>
+<br>
+<br>
+
+<% @projects.each do |project| %>
+  <div class="col-md-4">
+  <div class="project-box">
+    <div class="project-name">
+      <ul>
+        <li><%= project.name %></li>
+      </ul>
+    </div>
+    <div class="project-info">
+      <ul>
+        <li><p><%= project.description %></p></li>
+        <li><p><%= project.deadline %></p></li>
+        <!-- <td><%= project.reminder %></td>
+        <td><%= project.reward %></td>
+        <td><%= project.milestone %></td> -->
+      </ul>
+    </div>
+    <br>
+    <div class="project-options">
+      <ul>
+      <li><%= link_to 'Project Details', project %></li>
+      <br>
+      <li><%= link_to 'Edit Project', edit_project_path(project) %></li>
+      <br>
+      <li><%= link_to 'Delete Project', project, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+<% end %>
+
+</div>

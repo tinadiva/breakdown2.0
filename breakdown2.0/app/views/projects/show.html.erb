@@ -1,0 +1,40 @@
+<div class="container-fluid">
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <%= @project.name %>
+</h1>
+
+<p>
+  <%= @project.description %>
+</p>
+
+<br>
+
+  <h2>Deadline:</h2>
+  <p><%= @project.deadline %></p>
+
+<!-- <p>
+  <strong>Reminder:</strong>
+  <%= @project.reminder %>
+</p>
+
+<p>
+  <strong>Reward:</strong>
+  <%= @project.reward %>
+</p> -->
+
+<br>
+
+  <h2>Milestones:</h2>
+  <p><%= @project.milestone %></p>
+    <ol>
+      <% for @step in @project.steps %>
+      <li><%= @step.task %> <%= @step.due_date %></li>
+      <% end %>
+  </ol>
+<br>
+<br>
+<%= link_to 'Click to Edit Project', edit_project_path(@project) %> |
+<%= link_to 'Back to All Projects', projects_path %>
+</div>
