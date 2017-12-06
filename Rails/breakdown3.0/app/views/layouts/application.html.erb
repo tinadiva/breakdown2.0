@@ -13,24 +13,14 @@
   <body>
   	<header>
   		<div class="nav-logo">
-  			<%= link_to image_tag("breakdown-nav-logo.png"), root_path %>
+  			<%= image_tag ("breakdown-nav-logo.png") %>
   		</div>
-
       <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
-
+       
   		<div class="nav-buttons">
-        <%= link_to "Splash Page Here", pages_splash_url, class: "btn-reverse" %>
-  			<%= link_to "How Breakdown Works", pages_about_url, class: "btn-reverse" %>
-
-         <% if user_signed_in? %>
-          Logged in as <strong><%= current_user.email %></strong>.
-          <%= link_to 'Edit profile', edit_user_registration_path, class: "btn-reverse" %>
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn-reverse" %>
-        <% else %>
-          <%= link_to "Sign up", new_user_registration_path, class: "btn-reverse" %> 
-          <%= link_to "Login", new_user_session_path, class: "btn-reverse" %>
-        <% end %>
+  			<%= link_to "About Breakdown", projects_path, class: "btn-reverse" %>
+  			<%= link_to "Sign Up", projects_path, class: " btn-reverse" %>
   		</div>
   	</header>
     <%= yield %>

@@ -10,6 +10,5 @@ Rails.application.routes.draw do
   	end
   end
   root 'projects#index'
-  get 'pages/splash'
-  get 'pages/about'
+
 end
