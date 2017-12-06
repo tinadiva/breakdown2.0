@@ -1,0 +1,6 @@
+<%= form_for([@project, @milestone, @milestone.todoitems.build]) do |f| %>
+	<%= f.text_field :description, placeholder: "Add a New task", class: 'form-control' %>
+	<br>
+	<%= f.submit "Add Task", class: 'btn btn-primary' %>
+	<%= link_to "Done Adding Tasks", @project, class: 'btn btn-default' %>
+<% end %>

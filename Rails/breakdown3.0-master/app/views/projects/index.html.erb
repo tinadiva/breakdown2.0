@@ -1,0 +1,38 @@
+<div class="all-projects-heading-container">
+  <h1 class="all-projects">All Projects</h1>
+  <%= link_to 'New Project', new_project_path, class: 'new-project-button btn btn-primary btn-lg'%>
+</div>
+<div class="container-fluid">
+<p id="notice"><%= notice %></p>
+
+
+<div class="row">
+
+  <% @projects.each do |project| %>
+     <div class="col-md-4">
+        <%= link_to project do %>
+          <span>
+          <div class="index-card">
+
+            <h1><%= project.name %></h1>
+            <h2>Due in <%= time_ago_in_words(project.deadline) %></h2>
+            <span>
+            <div class="project-buttons">
+              <ul>
+              <!-- <li><%= link_to 'View Your Project', project, class: 'btn btn-primary' %></li> -->
+              <li><div class="edit-button">
+                <%= link_to 'EDIT YOUR PROJECT',  edit_project_path(project), class: 'btn btn-primary' %></div></li>
+
+              <li><div class="delete-button"><%= link_to 'DELETE YOUR PROJECT', project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %></div></li>
+              </ul>
+            </div><!--/project-buttons-->
+            </span>
+          </div><!--/index-card-->
+          </span>
+        <% end %>
+    </div><!--/col-md-4-->
+
+  <% end %>
+</div>
+
+</div><!--/container-fluid-->

@@ -1,0 +1,31 @@
+<%= form_with(model: project, local: true) do |form| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="project-form">
+  <div class="field">
+    <h2>What are you working on?</h2>
+    <%= form.text_field :name, id: :project_name, placeholder: "Project Name", class: 'inputfield' %>
+  </div>
+
+  <div class="field">
+    <h2>What's the deadline?</h2>
+    <%= form.date_select :deadline, id: :project_deadline, class: 'inputfield' %>
+  </div>
+  <br>
+
+  <div class="action">
+    <%= form.submit 'Create Project', :class => 'btn-create' %>
+  </div>
+
+</div>
+<% end %>

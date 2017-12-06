@@ -1,0 +1,14 @@
+<div class="milestones-form">
+<%= form_for([@project, @project.milestones.build]) do |f| %>
+	<p>Milestones are the major steps you need to take in order to accomplish your overall goal. Milestones can be broken down into tasks on the next page.</p>
+	<%= f.text_field :content, placeholder: "Add a Milestone", class: 'form-control' %>
+	<br>
+	<%= f.submit "Create New Milestone", class: 'btn btn-primary' %>
+<% end %>
+
+</div>
+<br>
+<br>
+<div class="btn-done">
+<%= link_to 'Done', projects_path, class: 'btn btn-primary' %>
+</div>

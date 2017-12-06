@@ -1,0 +1,10 @@
+<div class="milestone-flex-container">
+<h2>Breaking down: <%= @milestone.content %></h2>
+	<div class="milestone-task-container">
+		
+
+			<%= render @milestone.todoitems %>
+			<br>
+			<%= render "todoitems/form" %>
+	</div>
+</div>

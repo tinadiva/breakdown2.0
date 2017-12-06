@@ -1,0 +1,31 @@
+<div class="milestones">
+	<h4><%= milestone.content %>
+		<div class="dark-underline"></div>
+
+		<br><%= link_to "Break it down!", project_milestone_path(@project, milestone.id), class: 'btn btn-primary' %></h4>
+<table class="table table-border">
+
+<% for @todoitem in milestone.todoitems %>
+	<% if @todoitem.completed_at? %>
+	<tr>
+
+		<td style="width:20%"><i style = "color: #524084; opacity: 0.4;" class="fa fa-check"></i></td>	
+		<td style="opacity: 0.4; width: 70%"><strike><%= @todoitem.description %></strike></td>
+	</tr>
+	<% else %>
+	<tr>
+	<td style="width:20%"><%= link_to complete_project_milestone_todoitem_path(@project, milestone, @todoitem.id), method: :patch do %><i style = "color: #524084" class="fa fa-check"></i> <% end %></td>	
+		<td style="width: 70%"><%= @todoitem.description %></td> 
+			</tr>
+
+	<% end %>
+	<% end %>
+
+</table>
+	<%= link_to "Delete Milestone", project_milestone_path(@project, milestone.id), method: :delete, data: {confirm: "Are you sure you want to delete this milestone?"} %>
+			<i class="fa fa-trash-o" aria-hidden="true"></i>
+
+
+</div>
+<br>
+<br>
