@@ -13,14 +13,16 @@
   <body>
   	<header>
   		<div class="nav-logo">
-  			<%= image_tag ("breakdown-nav-logo.png") %>
+  			<%= link_to image_tag("breakdown-nav-logo.png"), root_path %>
   		</div>
-      <p class="notice"><%= notice %></p>
+
+       <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
-       
+
   		<div class="nav-buttons">
-  			<%= link_to "About Breakdown", projects_path, class: "btn-reverse" %>
-  			<%= link_to "Sign Up", projects_path, class: " btn-reverse" %>
+        <%= link_to "Splash Page Here", pages_splash_url, class: "btn-reverse" %>
+  			<%= link_to "About Breakdown", pages_about_url, class: "btn-reverse" %>
+  			<%= link_to "Sign Up", new_user_registration_url, class: " btn-reverse" %>
   		</div>
   	</header>
     <%= yield %>
