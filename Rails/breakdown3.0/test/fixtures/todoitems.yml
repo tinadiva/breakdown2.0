@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  completed: false
+  milestone: one
+
+two:
+  description: MyText
+  completed: false
+  milestone: two

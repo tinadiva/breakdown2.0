@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyText
+  due: 2017-12-03
+  project: one
+
+two:
+  content: MyText
+  due: 2017-12-03
+  project: two

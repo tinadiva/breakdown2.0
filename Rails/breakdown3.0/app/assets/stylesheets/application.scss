@@ -1,0 +1,236 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+a {
+	color: #332164;
+}
+header {
+	background: #523e86;
+	height: 120px;
+	display: flex;
+	align-items:center;
+}
+
+.nav-logo img {
+	height: 100px;
+	width: 100px;
+}
+.nav-logo {
+	padding-left: 20px;
+}
+.nav-buttons {
+	margin-left: auto;
+	padding-right: 20px;
+}
+.btn-reverse {
+	background: white !important;
+	color: #523e86 !important;
+	padding: 20px;
+	border-radius: 10px;
+}
+.project-buttons {
+	bottom: 0;
+	position: absolute;
+	margin: auto;
+}
+
+.index-card h1 {
+	text-overflow: ellipsis;
+}
+.index-card span{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	vertical-align: bottom;
+}
+.btn-done {
+	text-align: center;
+	magrin: auto;
+}
+
+.project-buttons ul {
+	list-style-type: none;
+	
+	display: inline-block;
+	z-index: 100;
+}
+.project-buttons li {
+	margin-bottom: 5px;
+	margin-left: -40px;
+	display: inline-block;
+	bottom: 0;
+	z-index: 100;
+}
+.container-fluid {
+	background: #efefef !important;
+	min-height: 100vh;
+}
+.all-projects-heading-container {
+	height: 80px;
+	color: #523e86 !important;
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+	padding-right: 20px;
+	background: #EBE8F3;
+}
+h1.all-projects {
+	left: 10;
+}
+.new-project-button {
+	margin-left: auto;
+}
+.index-card {
+	background: white;
+	height: 300px;
+	padding:10px;
+	box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4);
+	margin-top: 10px;
+}
+.index-card h1 {
+	color: #523e86;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: “Helvetica”, “Arial”, sans-serif;
+}
+.index-card h2 {
+	color: #851b22;  /*dark red*/
+	font-family: “Helvetica”, “Arial”, sans-serif;
+	font-weight: bold;
+	font-size: 22px;
+	text-align: left;   
+	}  
+.dark-underline {
+	border-bottom: 4px solid #1D0D48;
+	width: 30px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	margin: 0 auto;
+}
+
+.inputfield {
+	width: 50%;
+	border-radius: 20px;
+	height: 30px;
+}
+
+.milestones-form {
+	text-align: center;
+	margin: auto;
+	position: relative;
+}
+
+.project-form {
+	text-align: center;
+	margin: auto;
+	position: relative;
+}
+
+.btn-create {
+	border-radius: 15px;
+	background: #332164 !important;
+	border: #332164 !important;
+	font-family: “Helvetica”, “Arial”, sans-serif;
+	font-size: 14px;
+	color: white;
+	height: 40px;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.btn-create:hover {
+	-moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+	text-decoration: underline;
+}
+.delete-button {
+	text-align: right;
+	margin-left: 50px;
+}
+.btn-primary {
+	background: #332164 !important;
+	border: #332164 !important;
+	font-family: “Helvetica”, “Arial”, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	text-transform: capitalize;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+	height: 40px;
+	padding-top: 10px;
+}
+
+.btn-primary:hover {
+	-moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+	text-decoration: underline;
+}
+
+.btn-default {
+	background: transparent !important; 
+	color: white !important;
+	border: 1px solid #332164 !important;
+}
+.edit-link {
+	font-size: 12px;
+	color: white !important;
+}
+.project-flex-container {
+	background: #523e86;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+.project-container {
+	align-self: center;
+	color: white;
+	background: #9F92C2;
+	padding: 20px;
+	min-height: 800px;
+	width: 80%;
+}
+.milestones {
+	padding: 10px;
+	background: #d5cee8;
+	color: black;
+}
+.milestones h4 {
+	text-align: center;
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #1D0D48;
+}
+.milestone-flex-container {
+	background: #523e86;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+.milestone-flex-container h1, .milestone-flex-container h2, .project-flex-container h1, .project-flex-container h2 {
+	text-align: center;
+	color: white;
+}
+.milestone-task-container {
+	align-self: center;
+	color: white;
+	background: #9F92C2;
+	padding: 20px;
+	min-height: 400px;
+	width: 50%;
+}
+
+.edit-button {}

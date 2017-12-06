@@ -1,0 +1,16 @@
+<div class="project-flex-container">
+<p id="notice"><%= notice %></p>
+	<div class="project-container">
+
+
+  <h1>Project: <%= @project.name %> <%= link_to 'Edit', edit_project_path(@project), class:'edit-link' %></h1> 
+
+  <h2>Due in:
+  <%= time_ago_in_words(@project.deadline) %></h2>
+
+	<h3>Milestones</h3>
+		<%= render @project.milestones %>
+	<%= render "milestones/form" %>
+
+<%= link_to 'Back', projects_path %>
+</div></div>
